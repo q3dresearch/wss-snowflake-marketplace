@@ -34,6 +34,11 @@ from the registry.
 
 ## Questions this exists to answer
 
+![5 of 7 questions are answered now; 0 wait on the capture; 2 are not on a clock at all.](examples/charts/maturity.svg)
+
+**5 of these 7 are answered from captures already held.** 0 become answerable only as the series lengthens — the plate shows when. The remaining 2 are not on a clock: they need a method, or a field this source does not publish, and waiting produces neither. That distinction is the one a reader cannot make from a table of open questions.
+
+
 | # | Question | Status |
 | --- | --- | --- |
 | Q1 | How long does a data product stay on sale? | **answered** — median 1,081 days; 93.2% survive 90 days, 78.2% a year, 49.5% three |
