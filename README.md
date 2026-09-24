@@ -38,10 +38,40 @@ from the registry.
 | --- | --- | --- |
 | Q1 | How long does a data product stay on sale? | **answered** — median 1,081 days; 93.2% survive 90 days, 78.2% a year, 49.5% three |
 | Q2 | Is the marketplace growing, or churning at a growing size? | **answered — both.** 1,648 → 4,039 listings, but on 4,893 arrivals against 2,502 departures |
-| Q3 | Which vendors exit, and do they go all at once or one product at a time? | open — the slug's leading token hints at a vendor but is not a published field |
+| Q3 | Which vendors exit, and do they go all at once or one product at a time? | **answered — wholesale.** Of 501 vendors with 3+ listings, **107 (21%) lost every one**, 212 lost some, 182 lost none. Vendor SIZE does not predict it: one-product and ten-plus-product vendors both reach two years near 62% |
 | Q4 | Do whole categories die? | not observable — Snowflake publishes no category anywhere reachable |
 | Q5 | Does a withdrawn listing still resolve at its own URL? | **answered — unanswerable.** Every path under /marketplace/ returns the same shell, so status carries no information |
-| Q6 | Do withdrawals cluster in time — quarterly clearouts, or a steady trickle? | accruing — visible in the backfill but the snapshot gaps are uneven |
+| Q6 | Do withdrawals cluster in time — quarterly clearouts, or a steady trickle? | accruing — visible in the backfill but snapshot gaps run 23–145 days, too uneven to date a clearout |
+| Q7 | Is the marketplace getting better at retaining listings? | **answered — yes, and strongly.** One-year survival by arrival year: 2023 **72.5%**, 2024 **77.9%**, 2025 **83.7%** |
+
+## Vintage beats age
+
+![Listings arriving in 2025 survive their first year 11 points better than 2023's](examples/charts/cohorts.svg)
+
+**A listing's arrival year predicts its survival as clearly as its age does.** The
+trend runs *against* its own bias: 2023 is the sparsest year sampled (38-day median
+gaps against 29 in 2025), and sparse sampling misses short-lived listings entirely,
+which inflates that year's survival. The real gap is wider than drawn.
+
+Each curve stops at its own last observation rather than at the right edge — a 2025
+listing cannot have been watched for 730 days, and extending the line would assert
+survival past the data supporting it.
+
+## Vendors leave wholesale
+
+![21% of multi-product vendors have left the marketplace entirely](examples/charts/vendor-exit.svg)
+
+**Of 501 vendors with three or more listings, 107 lost every single one.** Another
+212 lost some and kept some. So the risk to a *catalogue* is not the sum of
+independent per-product risks — vendors exit as units.
+
+**Vendor size is a clean null.** One-product and ten-plus-product vendors both reach
+two years at about 62%, flat across every band. Whether a vendor leaves matters; how
+big it is does not.
+
+A vendor here is inferred from the slug's leading token, which is **not a published
+field** — Snowflake exposes no vendor anywhere reachable. It groups 501 multi-listing
+vendors out of 1,356 tokens, so treat it as a usable proxy, not a census.
 
 ## The backfill needed no accumulation
 
