@@ -1,0 +1,11 @@
+# This repo pins one engine version; the workflows install the same pin
+# (resolving the owner as ${{ github.repository_owner }}). For local
+# development against a sibling checkout: pip install -e ../wss
+#
+# v0.6.58 is the FLOOR, not a preference. app.snowflake.com/robots.txt is
+# `Disallow: /` followed by nine explicit Allow lines including /sitemap.xml.
+# Engines before 0.6.58 used urllib.robotparser, which returns the FIRST
+# matching rule, so they REFUSE this source outright -- `wss capture` reports
+# `skipped (robots_disallowed)` and stores nothing while the workflow stays
+# green. 0.6.58 evaluates longest-match and permits it, as the publisher wrote.
+wss[object] @ git+https://github.com/q3dresearch/wss-engine.git@v0.6.58

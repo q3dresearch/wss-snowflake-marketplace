@@ -1,0 +1,109 @@
+{
+  "generated_at": "2026-09-24T12:24:43Z",
+  "note": "Inferred from the derived rows by `wss schema`, not hand-written. Regenerate after any derive.",
+  "sources": {
+    "snowflake.marketplace.listings": {
+      "source_id": "snowflake.marketplace.listings",
+      "schema_id": "sfmarketplace.v1",
+      "cadence": "weekly",
+      "licence": "NOT ESTABLISHED (checked 2026-09-24). app.snowflake.com/robots.txt permits /sitemap.xml and the marketplace paths; no licence statement was found and Snowflake's terms have not been read for a redistribution grant. The capture is a list of public URLs, not vendor content.",
+      "personal_data": "none",
+      "storage": "git",
+      "publisher": "Snowflake",
+      "publisher_tier": "first_party",
+      "endpoints": 1
+    }
+  },
+  "observations": {
+    "rows": 12117,
+    "columns": [
+      "series_id",
+      "entity_id",
+      "observed_at",
+      "captured_at",
+      "metric",
+      "value",
+      "unit",
+      "source_id",
+      "raw_ref",
+      "parser_version"
+    ],
+    "partitions": [
+      "2026-09.csv.gz"
+    ],
+    "series": {
+      "snowflake.marketplace.listings": {
+        "rows": 12117,
+        "entities": 4039,
+        "entity_id_samples": [
+          "GZ1M6Z10S5AI",
+          "GZ1M6Z1365UP",
+          "GZ1M6Z13LNDP"
+        ],
+        "metrics": [
+          "listed",
+          "product_slug",
+          "slug_first_token"
+        ]
+      }
+    },
+    "parser_versions": [
+      "1"
+    ]
+  },
+  "metrics": {
+    "listed": {
+      "rows": 4039,
+      "unit": "count",
+      "type": "bool",
+      "series": [
+        "snowflake.marketplace.listings"
+      ],
+      "entities": 4039,
+      "distinct_values": 1,
+      "empty": 0,
+      "samples": [
+        "1"
+      ]
+    },
+    "product_slug": {
+      "rows": 4039,
+      "unit": "",
+      "type": "text",
+      "series": [
+        "snowflake.marketplace.listings"
+      ],
+      "entities": 4039,
+      "distinct_values": 3948,
+      "empty": 0,
+      "samples": [
+        "1q-1q-us-consumer-audience-",
+        "2150-datavault-builder-ag-datavault-builder-production",
+        "2150-datavault-builder-ag-datavault-builder-training"
+      ]
+    },
+    "slug_first_token": {
+      "rows": 4039,
+      "unit": "",
+      "type": "text",
+      "series": [
+        "snowflake.marketplace.listings"
+      ],
+      "entities": 4039,
+      "distinct_values": 1014,
+      "empty": 0,
+      "samples": [
+        "1q",
+        "2150",
+        "2iq"
+      ]
+    }
+  },
+  "raw": {
+    "files": 1,
+    "bytes_on_disk": 90797,
+    "capture_dates": 1,
+    "first_capture": "2026-09-24T12:18:08Z",
+    "last_capture": "2026-09-24T12:24:40Z"
+  }
+}

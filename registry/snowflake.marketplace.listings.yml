@@ -1,0 +1,67 @@
+source_id: snowflake.marketplace.listings
+status: active
+cadence: weekly
+schema_id: sfmarketplace.v1
+
+publisher: Snowflake
+publisher_tier: first_party
+
+# A listing that is withdrawn from sale simply leaves the sitemap. There is no
+# status value meaning delisted, no archive, and -- measured below -- no way to
+# tell from the listing URL afterwards, because every path returns the same
+# shell. The departure exists only as a difference between two sitemaps.
+destroys_own_history: true
+
+licence: "NOT ESTABLISHED (checked 2026-09-24). app.snowflake.com/robots.txt permits /sitemap.xml and the marketplace paths; no licence statement was found and Snowflake's terms have not been read for a redistribution grant. The capture is a list of public URLs, not vendor content."
+personal_data: none            # vendor data products; no individuals named
+storage: git
+
+notes: >-
+  Every data product listed for sale on the Snowflake Marketplace, weekly,
+  taken from the publisher's own sitemap.
+
+  WHY THE SITEMAP IS THE WHOLE SOURCE, AND THE LISTING PAGE IS WORTHLESS.
+  Measured 2026-09-24 with a six-case control: a live listing, a departed
+  listing, two garbage ids, a path with no id, and an unrelated path ALL
+  returned HTTP 200 at exactly 68,372 bytes with the SAME SHA-256. It is one
+  static SPA shell served for every URL under the marketplace. So the detail
+  page carries no provider, no price, no usage count and no date -- and a 200
+  on a listing URL proves only that the server answered. Any probe that reads
+  meaning into that status is measuring nothing. Do not fetch 4,039 of them.
+
+  WHAT THE SITEMAP DOES CARRY IS ENOUGH. Each entry is
+  /marketplace/listing/<ID>/<slug> and THE SLUG IS THE PRODUCT NAME --
+  placeiq-daily-visit-count, lseg-starmine-quantitative-models. So the sitemap
+  alone identifies what arrived and what left, which is the entire question.
+  Compare wss-apify's Databricks sibling, where the URL is a bare uuid and a
+  departed listing is unidentifiable forever.
+
+  THE CHURN IS REAL AND ALREADY MEASURED. The Internet Archive holds 46
+  mementos of this sitemap, and the most recent one carrying listings
+  (2026-05-01) has 3,765 against 4,039 today. Across those 146 days: 354
+  DEPARTED (9.4%, roughly 22% a year) and 628 ARRIVED. A data product being
+  withdrawn from sale is a commercial event that nobody publishes a record of.
+
+  DO NOT COMPARE AGAINST THE OLD MEMENTOS. The 2022-08-20 capture contains
+  ZERO listings -- the sitemap did not carry them then -- so a naive
+  oldest-versus-today diff reports 0 departures out of 0 and looks like perfect
+  stability. Pick a baseline by counting listings in it, never by date.
+
+  NO DENOMINATOR EXISTS. Snowflake publishes no install, subscriber or usage
+  figure anywhere reachable, so this is an arrivals-and-departures series and
+  must never be described as a popularity one.
+
+endpoints:
+  - url: "https://app.snowflake.com/sitemap.xml"
+    delay_seconds: 2
+    timeout_seconds: 90
+
+gates:
+  expect_status: 200
+  # 653 KB today. A sitemap that collapses below 100 KB has changed shape.
+  min_bytes: 100000
+  content_type_any: [xml, text]
+  must_contain: ["/marketplace/listing/", "<urlset"]
+  # The store grows and shrinks weekly; 354 departures in 146 days is normal.
+  # 50 still catches a truncated or half-written sitemap.
+  max_shrink_pct: 50
