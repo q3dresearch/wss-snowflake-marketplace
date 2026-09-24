@@ -1,0 +1,44 @@
+# Licence of the captured data
+
+**Crawl permission: established. Reuse: not established.**
+
+## Crawling
+
+Checked 2026-09-24. `app.snowflake.com/robots.txt` is 257 bytes:
+
+    User-agent: *
+    Disallow: /
+    Allow: /$
+    Allow: /login
+    Allow: /marketplace
+    Allow: /marketplace/
+    Allow: /static/
+    Allow: /v0/guest/
+    Allow: /pep.guest.v1.GuestService/
+    Allow: /bootstrap/marketplace
+    Allow: /sitemap.xml
+    Sitemap: https://app.snowflake.com/sitemap.xml
+
+The publisher **names the sitemap twice** — once as an explicit `Allow` and once
+as a `Sitemap:` directive advertising it to crawlers. Evaluated with longest-match
+(`wss.robots`), which is what RFC 9309 and Google specify. Note that
+`urllib.robotparser` reads this file as forbidding everything, including `/`,
+because it returns the first matching rule; that is a parser defect, not a
+restriction the publisher wrote.
+
+## Reuse
+
+**Unaddressed.** No licence statement appears in the sitemap or on the marketplace
+pages, and Snowflake's terms have not been read for a redistribution grant. Do not
+assert one.
+
+What this repository holds is narrower than a dataset: **a list of URLs the
+publisher publishes for search engines**, plus counts derived from it. There is no
+vendor content — no dataset, no description, no schema, no price — because the
+listing pages contain none that is reachable.
+
+## Personal data
+
+None. Listings are corporate data products. The slug's leading token often looks
+like a vendor name (`lseg-starmine-...`), but it is derived from a product title,
+not a published field, and it identifies companies rather than individuals.
