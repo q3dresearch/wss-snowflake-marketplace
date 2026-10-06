@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-29T10:43:15Z",
+  "generated_at": "2026-10-06T11:18:37Z",
   "note": "Inferred from the derived rows by `wss schema`, not hand-written. Regenerate after any derive.",
   "sources": {
     "snowflake.marketplace.listings": {
@@ -15,7 +15,7 @@
     }
   },
   "observations": {
-    "rows": 24249,
+    "rows": 36423,
     "columns": [
       "series_id",
       "entity_id",
@@ -29,16 +29,17 @@
       "parser_version"
     ],
     "partitions": [
-      "2026-09.csv.gz"
+      "2026-09.csv.gz",
+      "2026-10.csv.gz"
     ],
     "series": {
       "snowflake.marketplace.listings": {
-        "rows": 24249,
-        "entities": 4069,
+        "rows": 36423,
+        "entities": 4117,
         "entity_id_samples": [
           "GZ1M6Z10S5AI",
           "GZ1M6Z1365UP",
-          "GZ1M6Z13LNDP"
+          "GZ1M6Z13LNDL"
         ],
         "metrics": [
           "listed",
@@ -53,13 +54,13 @@
   },
   "metrics": {
     "listed": {
-      "rows": 8083,
+      "rows": 12141,
       "unit": "count",
       "type": "bool",
       "series": [
         "snowflake.marketplace.listings"
       ],
-      "entities": 4069,
+      "entities": 4117,
       "distinct_values": 1,
       "empty": 0,
       "samples": [
@@ -67,14 +68,14 @@
       ]
     },
     "product_slug": {
-      "rows": 8083,
+      "rows": 12141,
       "unit": "",
       "type": "text",
       "series": [
         "snowflake.marketplace.listings"
       ],
-      "entities": 4069,
-      "distinct_values": 3982,
+      "entities": 4117,
+      "distinct_values": 4091,
       "empty": 0,
       "samples": [
         "1q-1q-us-consumer-audience-",
@@ -83,14 +84,14 @@
       ]
     },
     "slug_first_token": {
-      "rows": 8083,
+      "rows": 12141,
       "unit": "",
       "type": "text",
       "series": [
         "snowflake.marketplace.listings"
       ],
-      "entities": 4069,
-      "distinct_values": 1024,
+      "entities": 4117,
+      "distinct_values": 1030,
       "empty": 0,
       "samples": [
         "1q",
@@ -100,10 +101,10 @@
     }
   },
   "raw": {
-    "files": 2,
-    "bytes_on_disk": 181771,
-    "capture_dates": 2,
+    "files": 3,
+    "bytes_on_disk": 274043,
+    "capture_dates": 3,
     "first_capture": "2026-09-24T12:18:08Z",
-    "last_capture": "2026-09-29T10:43:12Z"
+    "last_capture": "2026-10-06T11:18:35Z"
   }
 }

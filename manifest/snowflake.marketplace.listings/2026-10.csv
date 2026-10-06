@@ -1,0 +1,2 @@
+source_id,url,fetched_at,http_status,content_type,content_length,content_sha256,etag,last_modified,outcome,raw_ref,reason,warnings
+snowflake.marketplace.listings,https://app.snowflake.com/sitemap.xml,2026-10-06T11:18:35Z,200,text/xml,675445,35e85879d073c60d04a946776b046b7a1b640bb819bbacce23276f61bc28cabc,,"Tue, 06 Oct 2026 11:10:21 GMT",changed,raw/snowflake.marketplace.listings/2026/10/20261006T111835Z-35e85879d073.xml.gz,,
