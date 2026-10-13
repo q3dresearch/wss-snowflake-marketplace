@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-06T11:18:37Z",
+  "generated_at": "2026-10-13T11:51:01Z",
   "note": "Inferred from the derived rows by `wss schema`, not hand-written. Regenerate after any derive.",
   "sources": {
     "snowflake.marketplace.listings": {
@@ -15,7 +15,7 @@
     }
   },
   "observations": {
-    "rows": 36423,
+    "rows": 48723,
     "columns": [
       "series_id",
       "entity_id",
@@ -34,8 +34,8 @@
     ],
     "series": {
       "snowflake.marketplace.listings": {
-        "rows": 36423,
-        "entities": 4117,
+        "rows": 48723,
+        "entities": 4174,
         "entity_id_samples": [
           "GZ1M6Z10S5AI",
           "GZ1M6Z1365UP",
@@ -54,13 +54,13 @@
   },
   "metrics": {
     "listed": {
-      "rows": 12141,
+      "rows": 16241,
       "unit": "count",
       "type": "bool",
       "series": [
         "snowflake.marketplace.listings"
       ],
-      "entities": 4117,
+      "entities": 4174,
       "distinct_values": 1,
       "empty": 0,
       "samples": [
@@ -68,14 +68,14 @@
       ]
     },
     "product_slug": {
-      "rows": 12141,
+      "rows": 16241,
       "unit": "",
       "type": "text",
       "series": [
         "snowflake.marketplace.listings"
       ],
-      "entities": 4117,
-      "distinct_values": 4091,
+      "entities": 4174,
+      "distinct_values": 4143,
       "empty": 0,
       "samples": [
         "1q-1q-us-consumer-audience-",
@@ -84,14 +84,14 @@
       ]
     },
     "slug_first_token": {
-      "rows": 12141,
+      "rows": 16241,
       "unit": "",
       "type": "text",
       "series": [
         "snowflake.marketplace.listings"
       ],
-      "entities": 4117,
-      "distinct_values": 1030,
+      "entities": 4174,
+      "distinct_values": 1039,
       "empty": 0,
       "samples": [
         "1q",
@@ -101,10 +101,10 @@
     }
   },
   "raw": {
-    "files": 3,
-    "bytes_on_disk": 274043,
-    "capture_dates": 3,
+    "files": 4,
+    "bytes_on_disk": 367205,
+    "capture_dates": 4,
     "first_capture": "2026-09-24T12:18:08Z",
-    "last_capture": "2026-10-06T11:18:35Z"
+    "last_capture": "2026-10-13T11:50:58Z"
   }
 }
