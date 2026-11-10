@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-03T11:58:23Z",
+  "generated_at": "2026-11-10T12:41:50Z",
   "note": "Inferred from the derived rows by `wss schema`, not hand-written. Regenerate after any derive.",
   "sources": {
     "snowflake.marketplace.listings": {
@@ -15,7 +15,7 @@
     }
   },
   "observations": {
-    "rows": 86145,
+    "rows": 98622,
     "columns": [
       "series_id",
       "entity_id",
@@ -35,12 +35,12 @@
     ],
     "series": {
       "snowflake.marketplace.listings": {
-        "rows": 86145,
-        "entities": 4345,
+        "rows": 98622,
+        "entities": 4381,
         "entity_id_samples": [
           "GZ1M6Z10S5AI",
-          "GZ1M6Z1365UP",
-          "GZ1M6Z13LNDL"
+          "GZ1M6Z10S5EE",
+          "GZ1M6Z1365UP"
         ],
         "metrics": [
           "listed",
@@ -55,13 +55,13 @@
   },
   "metrics": {
     "listed": {
-      "rows": 28715,
+      "rows": 32874,
       "unit": "count",
       "type": "bool",
       "series": [
         "snowflake.marketplace.listings"
       ],
-      "entities": 4345,
+      "entities": 4381,
       "distinct_values": 1,
       "empty": 0,
       "samples": [
@@ -69,30 +69,30 @@
       ]
     },
     "product_slug": {
-      "rows": 28715,
+      "rows": 32874,
       "unit": "",
       "type": "text",
       "series": [
         "snowflake.marketplace.listings"
       ],
-      "entities": 4345,
-      "distinct_values": 4339,
+      "entities": 4381,
+      "distinct_values": 4384,
       "empty": 0,
       "samples": [
         "1q-1q-us-consumer-audience-",
-        "2150-datavault-builder-ag-datavault-builder-production",
-        "2150-datavault-builder-ag-datavault-builder-training"
+        "1q-1q-us-consumer-foot-traffic-visitation",
+        "2150-datavault-builder-ag-datavault-builder-production"
       ]
     },
     "slug_first_token": {
-      "rows": 28715,
+      "rows": 32874,
       "unit": "",
       "type": "text",
       "series": [
         "snowflake.marketplace.listings"
       ],
-      "entities": 4345,
-      "distinct_values": 1058,
+      "entities": 4381,
+      "distinct_values": 1068,
       "empty": 0,
       "samples": [
         "1q",
@@ -102,10 +102,10 @@
     }
   },
   "raw": {
-    "files": 7,
-    "bytes_on_disk": 650147,
-    "capture_dates": 7,
+    "files": 8,
+    "bytes_on_disk": 745099,
+    "capture_dates": 8,
     "first_capture": "2026-09-24T12:18:08Z",
-    "last_capture": "2026-11-03T11:58:19Z"
+    "last_capture": "2026-11-10T12:41:46Z"
   }
 }
