@@ -1,12 +1,12 @@
 # Data shape
 
-*Generated 2026-11-10T12:41:50Z by `wss schema` from the derived rows. Do not hand-edit — regenerate after any derive.*
+*Generated 2026-11-17T13:29:45Z by `wss schema` from the derived rows. Do not hand-edit — regenerate after any derive.*
 
 **You should not need to download anything to read this.**
 
-- **98,622 observations** across 3 partition(s), in **1 series**
-  - `snowflake.marketplace.listings` — 98,622 rows, **4381 entities**
-- Raw: 8 file(s), 745,099 bytes on disk, 8 capture date(s), 2026-09-24 → 2026-11-10
+- **111,312 observations** across 3 partition(s), in **1 series**
+  - `snowflake.marketplace.listings` — 111,312 rows, **4485 entities**
+- Raw: 9 file(s), 842,401 bytes on disk, 9 capture date(s), 2026-09-24 → 2026-11-17
 
 ## Sources
 
@@ -26,9 +26,9 @@ series_id, entity_id, observed_at, captured_at, metric, value, unit, source_id, 
 
 | metric | series | rows | entities | type | unit | distinct | range / samples |
 | --- | --- | ---: | ---: | --- | --- | ---: | --- |
-| `listed` | snowflake.marketplace.listings | 32,874 | 4381 | bool | count | 1 | `1` |
-| `product_slug` | snowflake.marketplace.listings | 32,874 | 4381 | text |  | 4384 | `1q-1q-us-consumer-audien`, `1q-1q-us-consumer-foot-t`, `2150-datavault-builder-a` |
-| `slug_first_token` | snowflake.marketplace.listings | 32,874 | 4381 | text |  | 1068 | `1q`, `2150`, `2iq` |
+| `listed` | snowflake.marketplace.listings | 37,104 | 4485 | bool | count | 1 | `1` |
+| `product_slug` | snowflake.marketplace.listings | 37,104 | 4485 | text |  | 4498 | `1q-1q-us-consumer-audien`, `1q-1q-us-consumer-foot-t`, `2150-datavault-builder-a` |
+| `slug_first_token` | snowflake.marketplace.listings | 37,104 | 4485 | text |  | 1079 | `1q`, `2150`, `2iq` |
 
 ## Partitions
 
